@@ -1,0 +1,40 @@
+geofence:
+  version: 1
+  region: mexicali-baja-california
+  units: wgs84-decimal-degrees
+  max_altitude_m: 120
+  min_altitude_m: 25
+
+authorized_zones:
+  - name: colonia-ampliacion-mexicali
+    polygon:
+      - [32.6415, -115.4482]
+      - [32.6430, -115.4475]
+      - [32.6425, -115.4465]
+      - [32.6415, -115.4478]
+  - name: colonia-issstecali
+    polygon:
+      - [32.6570, -115.4650]
+      - [32.6585, -115.4640]
+      - [32.6580, -115.4625]
+      - [32.6568, -115.4632]
+  - name: colonia-hemisfe
+    polygon:
+      - [32.6520, -115.4720]
+      - [32.6535, -115.4710]
+      - [32.6530, -115.4695]
+      - [32.6518, -115.4702]
+
+no_fly_zones:
+  - name: aeropuerto-internacional-mexicali
+    polygon:
+      - [32.6300, -115.3800]
+      - [32.6350, -115.3750]
+      - [32.6320, -115.3700]
+      - [32.6280, -115.3750]
+  - name: zona-militar-zona-norte
+    polygon:
+      - [32.6800, -115.4900]
+      - [32.6850, -115.4850]
+      - [32.6820, -115.4800]
+      - [32.6780, -115.4850]
