@@ -1,0 +1,16 @@
+name: agualibreos-kernel
+version: 0.1.0
+authors: ["AguaLibreOS Team"]
+edition: "2021"
+
+[dependencies]
+no_std_io = "0.3"
+cortex_m = "0.9"
+panic-halt = "0.2"
+embedded-hal = "1.0"
+micromath = "2.1"
+heapless = "0.8"
+bare-metal = "1.0"
+
+[dependencies.agualibreos-common]
+path = "../../common"

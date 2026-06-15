@@ -1,0 +1,30 @@
+# FastAPI Ground Station Configuration
+
+app:
+  name: agualibreos-ground-station
+  version: "0.1.0"
+  debug: false
+
+server:
+  host: 0.0.0.0
+  port: 8080
+  workers: 4
+
+mavlink:
+  connection: serial:/dev/ttyUSB0:57600
+  dialect: common
+  heartbeat_interval_s: 1
+  message_timeout_ms: 3000
+  packet_loss_tolerance: 0.15
+
+telemetry:
+  broadcast_interval_ms: 100
+  retention_days: 90
+  storage_backend: sqlite
+
+safety:
+  rth_battery_threshold: 0.25
+  rth_wind_threshold_ms: 12
+  rth_temp_threshold_c: 55
+  geofence_poll_ms: 500
+  parachute_deploy_altitude_m: 15

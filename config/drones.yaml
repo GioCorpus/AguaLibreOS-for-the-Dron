@@ -1,0 +1,38 @@
+drones:
+  - id: drone-001
+    name: garrafon-uno
+    model: hexacopter-heavy-frame
+    payload_capacity_kg: 20
+    battery_type: LiPo-6s-12000mAh
+    max_flight_time_minutes: 35
+    sensors:
+      - type: rtk-gps
+        model: ublox-f9p
+      - type: lidar
+        model: tf-luna
+      - type: camera
+        model: raspberry-pi-camera-v3
+      - type: imu
+        model: bno055
+    comm_channels:
+      - type: lora
+        frequency_mhz: 915
+      - type: 4g-lte
+        carrier: telcel-mexico
+      - type: mavlink
+        protocol: serial-telem
+
+ground_station:
+  host: 0.0.0.0
+  port: 8080
+  api_version: v1
+  telemetry_refresh_hz: 10
+
+mission_defaults:
+  default_altitude_m: 80
+  min_altitude_m: 30
+  max_altitude_m: 150
+  cruise_speed_ms: 12
+  max_wind_speed_ms: 10
+  max_temp_celsius: 55
+  return_battery_percent: 25
